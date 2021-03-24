@@ -1,12 +1,4 @@
----
-layout: page
-title: Download
-permalink: /download/
----
-
-<span class="page-tagline">Loved it? Download DevJournal</span>
-
-
+I"¢<p><span class="page-tagline">Loved it? Download DevJournal</span></p>
 
 <div class="post-content-download">
   <p>
@@ -40,3 +32,4 @@ permalink: /download/
   </div>
 
 </div>
+:ET
