@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="Ronn's Blog" property="og:site_name">
+
+  <meta content="Open Topics IV: Lucas Theorem" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="<h3>Hello, world!</h3><h1>Ronn's Blog</h1><h3>" property="og:description">
+
+
+  <meta content="http://linrongen.github.io/problem%20solving/math/2021/03/23/Lucas-Theorem.html" property="og:url">
+
+
+  <meta content="2021-03-23T13:00:00+08:00" property="article:published_time">
+  <meta content="http://linrongen.github.io/about/" property="article:author">
+
+
+  <meta property="og:image" content="">
+
+
+  
+  <meta content="Problem Solving" property="article:section">
+  
+
+
+  
+
+  <title>Open Topics IV: Lucas Theorem</title>
+  <meta name="description" content="A presentation (Open Topics) on “Lucas Theorem” and “Extended Lucas Method” given on Problem Solving IV.View PDF">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/main.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+  <link rel="canonical" href="http://linrongen.github.io/problem%20solving/math/2021/03/23/Lucas-Theorem.html">
+  <link rel="alternate" type="application/rss+xml" title="Ronn's Blog" href="http://linrongen.github.io/feed.xml">
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+        }
+    });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+
+
+  <body>
+<section>
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Ronn's Blog</a>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+        <li><a href="/Problem Solving/">Problem Solving</a></li>
+
+        
+
+        
+        
+        <li><a href="/about/">About</a></li>
+
+        
+
+        
+        
+        <li><a href="/download/">Download</a></li>
+
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+
+
+      </ul>
+
+    <!--  <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Know More!</a></li>
+
+      </ul>-->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</section>
+
+<section>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">Open Topics IV: Lucas Theorem</h1>
+      <p class="post-meta"><time datetime="2021-03-23T13:00:00+08:00" itemprop="datePublished">Mar 23, 2021</time></p>
+      
+    </div>
+
+</div>
+
+
+  <div class="post-content container" itemprop="articleBody">
+    <p>A presentation (Open Topics) on “Lucas Theorem” and “Extended Lucas Method” given on Problem Solving IV.</p>
+<style>.pdf-embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 20px; border-style: solid; } .pdf-link { background-color: white; text-align: center; border-style: solid; } .pdf-embed-container iframe, .pdf-embed-container object, .pdf-embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+<div class="pdf-link"><a href="/pdf/Lucas_Theorem.pdf" target="_blank">View PDF</a></div>
+<div class="pdf-embed-container"><iframe title="PDF file" width="640" height="390" src="/pdf/Lucas_Theorem.pdf" frameborder="0" allowfullscreen=""></iframe></div>
+
+  </div>
+
+</article>
+
+</section>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container footer-content">
+    Made with <i class ="fa fa-heart"></i> by Hemang Kumar<br>
+    Powered By Jekyll
+  </div>
+</nav>
+
+  </body>
+
+</html>
