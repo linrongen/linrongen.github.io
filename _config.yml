@@ -25,6 +25,3 @@ markdown: kramdown
 plugins:
   - jekyll-pdf-embed
 
-exclude: [Rakefile]
-#gems: [jekyll-coffeescript]
-

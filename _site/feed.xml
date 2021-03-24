@@ -5,8 +5,8 @@
     <description>&lt;h3&gt;Hello, world!&lt;/h3&gt;&lt;h1&gt;Ronn's Blog&lt;/h1&gt;&lt;h3&gt;</description>
     <link>http://linrongen.github.io/</link>
     <atom:link href="http://linrongen.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 24 Mar 2021 15:57:22 +0800</pubDate>
-    <lastBuildDate>Wed, 24 Mar 2021 15:57:22 +0800</lastBuildDate>
+    <pubDate>Wed, 24 Mar 2021 18:24:20 +0800</pubDate>
+    <lastBuildDate>Wed, 24 Mar 2021 18:24:20 +0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -38,9 +38,6 @@
       <item>
         <title>Open Topics IV: Lucas Theorem</title>
         <description>&lt;p&gt;A presentation (Open Topics) on “Lucas Theorem” and “Extended Lucas Method” given on Problem Solving IV.&lt;/p&gt;
-&lt;style&gt;.pdf-embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 20px; border-style: solid; } .pdf-link { background-color: white; text-align: center; border-style: solid; } .pdf-embed-container iframe, .pdf-embed-container object, .pdf-embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }&lt;/style&gt;
-&lt;div class=&quot;pdf-link&quot;&gt;&lt;a href=&quot;/pdf/Lucas_Theorem.pdf&quot; target=&quot;_blank&quot;&gt;View PDF&lt;/a&gt;&lt;/div&gt;
-&lt;div class=&quot;pdf-embed-container&quot;&gt;&lt;iframe title=&quot;PDF file&quot; width=&quot;640&quot; height=&quot;390&quot; src=&quot;/pdf/Lucas_Theorem.pdf&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 23 Mar 2021 13:00:00 +0800</pubDate>
         <link>http://linrongen.github.io/problem%20solving/math/2021/03/23/Lucas-Theorem.html</link>
