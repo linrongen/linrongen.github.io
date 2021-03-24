@@ -5,9 +5,27 @@
     <description>&lt;h3&gt;Hello, world!&lt;/h3&gt;&lt;h1&gt;Ronn's Blog&lt;/h1&gt;&lt;h3&gt;</description>
     <link>http://linrongen.github.io/</link>
     <atom:link href="http://linrongen.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 24 Mar 2021 19:28:22 +0800</pubDate>
-    <lastBuildDate>Wed, 24 Mar 2021 19:28:22 +0800</lastBuildDate>
+    <pubDate>Wed, 24 Mar 2021 21:39:45 +0800</pubDate>
+    <lastBuildDate>Wed, 24 Mar 2021 21:39:45 +0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>Hintikka Set</title>
+        <description>&lt;p&gt;&lt;strong&gt;定义 3.25&lt;/strong&gt;   设 $\mathscr{L}$ 为一阶语言, $\Phi$ 为 $\mathscr{L}$ 的公式集, 令 $T$ 为全体 $\mathscr{L}$ 项之集. $\Phi$ 为 Hintikka 集指:&lt;br /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;若公式 $A$ 为原子的, 则 $A$ 和 $\lnot A$ 不能都属于 $\Phi$.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Wed, 24 Mar 2021 13:00:00 +0800</pubDate>
+        <link>http://linrongen.github.io/mathematical%20logic/math/2021/03/24/Hintikka_Set.html</link>
+        <guid isPermaLink="true">http://linrongen.github.io/mathematical%20logic/math/2021/03/24/Hintikka_Set.html</guid>
+        
+        
+        <category>Mathematical Logic</category>
+        
+        <category>Math</category>
+        
+      </item>
     
       <item>
         <title>Welcome to my blog!</title>
@@ -37,7 +55,7 @@
     
       <item>
         <title>Open Topics IV: Lucas Theorem</title>
-        <description>&lt;p&gt;A presentation (Open Topics) on “Lucas Theorem” and “Extended Lucas Method” given on Problem Solving IV.&lt;/p&gt;
+        <description>&lt;p&gt;A presentation (Open Topics) on “Lucas Theorem” and “Extended Lucas Method” given on &lt;a href=&quot;http://cslabcms.nju.edu.cn/problem_solving/index.php/2019%E7%BA%A7&quot;&gt;Problem Solving IV&lt;/a&gt;.&lt;/p&gt;
 &lt;style&gt;.pdf-embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 20px; border-style: solid; } .pdf-link { background-color: white; text-align: center; border-style: solid; } .pdf-embed-container iframe, .pdf-embed-container object, .pdf-embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }&lt;/style&gt;
 &lt;div class=&quot;pdf-link&quot;&gt;&lt;a href=&quot;/pdf/Lucas_Theorem.pdf&quot; target=&quot;_blank&quot;&gt;View PDF&lt;/a&gt;&lt;/div&gt;
 &lt;div class=&quot;pdf-embed-container&quot;&gt;&lt;iframe title=&quot;PDF file&quot; width=&quot;640&quot; height=&quot;390&quot; src=&quot;/pdf/Lucas_Theorem.pdf&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
