@@ -6,17 +6,113 @@
     <description>&lt;h1 style='font-size : 40px'&gt;Ronn's Blog&lt;/h1&gt;&lt;h3&gt;</description>
     <link>http://linrongen.github.io/</link>
     <atom:link href="http://linrongen.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 05 May 2021 15:26:42 +0800</pubDate>
-    <lastBuildDate>Wed, 05 May 2021 15:26:42 +0800</lastBuildDate>
+    <pubDate>Thu, 06 May 2021 00:33:29 +0800</pubDate>
+    <lastBuildDate>Thu, 06 May 2021 00:33:29 +0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
         <title>Midterm Notes of MathLogic</title>
         <!--<title style='font-size : 40px'>Midterm Notes of MathLogic</title>-->
-        <description>&lt;p&gt;&lt;strong&gt;定义 3.25&lt;/strong&gt;   设 $\mathscr{L}$ 为一阶语言, $\Phi$ 为 $\mathscr{L}$ 的公式集, 令 $T$ 为全体 $\mathscr{L}$ 项之集. $\Phi$ 为 Hintikka 集指:&lt;br /&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;若公式 $A$ 为原子的, 则 $A$ 和 $\lnot A$ 不能都属于 $\Phi$.&lt;/li&gt;
-&lt;/ol&gt;
+        <description>&lt;!--
+**定义 3.25** &amp;nbsp; 设 $\mathscr{L}$ 为一阶语言, $\Phi$ 为 $\mathscr{L}$ 的公式集, 令 $T$ 为全体 $\mathscr{L}$ 项之集. $\Phi$ 为 Hintikka 集指:&lt;br&gt;
+1. 若公式 $A$ 为原子的, 则 $A$ 和 $\lnot A$ 不能都属于 $\Phi$.
+--&gt;
+
+&lt;p&gt;&lt;a href=&quot;#jump1.10&quot;&gt;1.10&lt;/a&gt;, &lt;a href=&quot;#jump1.12&quot;&gt;1.12&lt;/a&gt;, &lt;a href=&quot;#jump1.15&quot;&gt;1.15&lt;/a&gt;, &lt;a href=&quot;#jump1.16&quot;&gt;1.16&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;center&gt;&lt;h2 style=&quot;font-size : 40px&quot;&gt;$\S$ 1&lt;/h2&gt;&lt;/center&gt;
+
+&lt;p&gt;&lt;span id=&quot;jump1.10&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;定义1.10&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+
+\[H_A(v(P_1), v(P_2), \dots, v(P_n)) = \hat{v}(A),\]
+
+&lt;p&gt;其中 $FV(A)=\{v(P_1), v(P_2), \dots, v(P_n)\}$.&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;jump1.12&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;定理1.12&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;令 $v$ 满足 $v(P_i) = x_i$ 对 $1\le i\le n$ 成立. 再令 &lt;br /&gt;&lt;/p&gt;
+
+\[A=\bigvee\limits_{i=1}^{m} \bigwedge\limits_{k=1}^{n} P_{i,k}^{\star}, \qquad
+    A'=\bigwedge\limits_{j=1}^{m} \bigvee\limits_{k=1}^{n} Q_{j,k}^{\star},\]
+
+&lt;p&gt;其中 &lt;br /&gt;&lt;/p&gt;
+
+\[P_{i,k}^{\star} = 
+    \begin{cases}
+        P_k &amp;amp; \text{if} \;\; a_{ik} = \mathrm{T} \\
+        \lnot P_k &amp;amp; \text{if} \;\; a_{ik} = \mathrm{F}
+    \end{cases},
+\qquad
+Q_{j,k}^{\star} = 
+    \begin{cases}
+        \lnot P_k &amp;amp; \text{if} \;\; a_{jk} = \mathrm{T} \\
+        P_k &amp;amp; \text{if} \;\; a_{jk} = \mathrm{F}
+    \end{cases},\]
+
+&lt;p&gt;则 &lt;br /&gt;&lt;/p&gt;
+
+\[\begin{align}
+H_A(x_1, x_2, \dots, x_n) = \mathrm{T}
+    &amp;amp; \Leftrightarrow \hat{v}(A) = \mathrm{T} \\
+    &amp;amp; \Leftrightarrow v(P_{i,k}^{\star}) = \mathrm{T} &amp;amp; \text{for some } i, \text{ for all } k \\
+    &amp;amp; \Leftrightarrow v(P_{k}) = x_i = a_{ik} &amp;amp; \text{for some } i, \text{ for all } k \\
+    &amp;amp; \Leftrightarrow (x_1, x_2, \dots, x_n) \in T_f \\
+    &amp;amp; \Leftrightarrow f(x_1, x_2, \dots, x_n) = \mathrm{T}.
+\end{align}\]
+
+&lt;p&gt;类似地, &lt;br /&gt;&lt;/p&gt;
+
+\[\begin{align}
+H'_A(x_1, x_2, \dots, x_n) = \mathrm{F}
+    &amp;amp; \Leftrightarrow \hat{v}(A') = \mathrm{F} \\
+    &amp;amp; \Leftrightarrow v(Q_{j,k}^{\star}) = \mathrm{F} &amp;amp; \text{for some } j, \text{ for all } k \\
+    &amp;amp; \Leftrightarrow v(P_{k}) = x_j = b_{jk} &amp;amp; \text{for some } j, \text{ for all } k \\
+    &amp;amp; \Leftrightarrow (x_1, x_2, \dots, x_n) \in F_f \\
+    &amp;amp; \Leftrightarrow f(x_1, x_2, \dots, x_n) = \mathrm{F}.
+\end{align}\]
+
+&lt;p&gt;&lt;span id=&quot;jump1.15&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;命题1.15&lt;/strong&gt; &lt;br /&gt;
+&lt;!--
+&quot;$\Rightarrow$&quot; : &lt;br&gt;
+令 $v$ 满足 $v(Q_i) = x_i$ 对 $1\le i\le n$ 成立, 则 &lt;br&gt;--&gt;&lt;/p&gt;
+
+\[\begin{align}
+A\simeq B &amp;amp; \Leftrightarrow v \vDash A \text{ iff } v \vDash B &amp;amp; \text{ for all } v\\
+          &amp;amp; \Leftrightarrow \hat{v}(A) = \hat{v}(B) &amp;amp; \text{ for all } v \\
+          &amp;amp; \Leftrightarrow H_A(v(Q_1),v(Q_2),\dots, v(Q_n)) = H_B(v(Q_1),v(Q_2),\dots, v(Q_n)) &amp;amp; \text{ for all } v \\
+          &amp;amp; \Leftrightarrow H_A(x_1,x_2,\dots,x_n) = H_B(x_1,x_2,\dots,x_n) &amp;amp; \text{ for all } \vec{x}\\
+          &amp;amp; \Leftrightarrow H_A = H_B
+\end{align}\]
+
+&lt;!--$H_A(v(P_1), v(P_2), \dots, v(P_n)) = \hat{v}(A) = \mathrm{T}
+    \Leftrightarrow v \vDash A
+    \Leftrightarrow (v(P_1), v(P_2), \dots, v(P_n)) \in T_f
+    \Leftrightarrow f(v(P_1), v(P_2), \dots, v(P_n)) = \mathrm{T} $ --&gt;
+
+&lt;p&gt;&lt;span id=&quot;jump1.16&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;命题1.16&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+
+\[H_A \xlongequal[]{1.10} f \xlongequal[]{1.12} H_B \xrightarrow{1.15} A \simeq B\]
+
+&lt;!--
+$$
+\begin{matrix}
+A \simeq B(nf) &amp; \simeq &amp; 1 \\
+\downarrow &amp;  &amp; \uparrow \\
+H_A &amp; = &amp; f \\
+\end{matrix}
+$$
+--&gt;
+
 </description>
         <pubDate>Wed, 24 Mar 2021 13:00:00 +0800</pubDate>
         <link>http://linrongen.github.io/mathematical%20logic/math/2021/03/24/Hintikka_Set.html</link>

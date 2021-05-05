@@ -34,7 +34,7 @@
   
 
   <title>Midterm Notes of MathLogic</title>
-  <meta name="description" content="定义 3.25   设 $\mathscr{L}$ 为一阶语言, $\Phi$ 为 $\mathscr{L}$ 的公式集, 令 $T$ 为全体 $\mathscr{L}$ 项之集. $\Phi$ 为 Hintikka 集指:  若公式 $A$ 为原子的, 则 $A$ 和 $\lnot A$ 不能都属于 $\Phi$.">
+  <meta name="description" content="">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/main.css">
@@ -54,15 +54,21 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
   <link rel="canonical" href="http://linrongen.github.io/mathematical%20logic/math/2021/03/24/Hintikka_Set.html">
   <link rel="alternate" type="application/rss+xml" title="Ronn's Blog" href="http://linrongen.github.io/feed.xml">
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        inlineMath: [['$','$']]
-        }
-    });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <head>
+        <script>MathJax = {
+            tex:{
+                    inlineMath: [['$', '$'], ['\\(', '\\)']]
+                },
+            svg:{
+                    fontCache: 'global'
+                }
+            };
+
+        </script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  </head>
+
 </head>
 
 
@@ -142,10 +148,106 @@
 
 
   <div class="post-content container" itemprop="articleBody">
-    <p><strong>定义 3.25</strong>   设 $\mathscr{L}$ 为一阶语言, $\Phi$ 为 $\mathscr{L}$ 的公式集, 令 $T$ 为全体 $\mathscr{L}$ 项之集. $\Phi$ 为 Hintikka 集指:<br /></p>
-<ol>
-  <li>若公式 $A$ 为原子的, 则 $A$ 和 $\lnot A$ 不能都属于 $\Phi$.</li>
-</ol>
+    <!--
+**定义 3.25** &nbsp; 设 $\mathscr{L}$ 为一阶语言, $\Phi$ 为 $\mathscr{L}$ 的公式集, 令 $T$ 为全体 $\mathscr{L}$ 项之集. $\Phi$ 为 Hintikka 集指:<br>
+1. 若公式 $A$ 为原子的, 则 $A$ 和 $\lnot A$ 不能都属于 $\Phi$.
+-->
+
+<p><a href="#jump1.10">1.10</a>, <a href="#jump1.12">1.12</a>, <a href="#jump1.15">1.15</a>, <a href="#jump1.16">1.16</a></p>
+
+<p><br /><br /></p>
+
+<center><h2 style="font-size : 40px">$\S$ 1</h2></center>
+
+<p><span id="jump1.10"></span><br /><br /></p>
+
+<p><strong>定义1.10</strong> <br /></p>
+
+\[H_A(v(P_1), v(P_2), \dots, v(P_n)) = \hat{v}(A),\]
+
+<p>其中 $FV(A)=\{v(P_1), v(P_2), \dots, v(P_n)\}$.</p>
+
+<p><span id="jump1.12"></span><br /><br /></p>
+
+<p><strong>定理1.12</strong> <br /></p>
+
+<p>令 $v$ 满足 $v(P_i) = x_i$ 对 $1\le i\le n$ 成立. 再令 <br /></p>
+
+\[A=\bigvee\limits_{i=1}^{m} \bigwedge\limits_{k=1}^{n} P_{i,k}^{\star}, \qquad
+    A'=\bigwedge\limits_{j=1}^{m} \bigvee\limits_{k=1}^{n} Q_{j,k}^{\star},\]
+
+<p>其中 <br /></p>
+
+\[P_{i,k}^{\star} = 
+    \begin{cases}
+        P_k &amp; \text{if} \;\; a_{ik} = \mathrm{T} \\
+        \lnot P_k &amp; \text{if} \;\; a_{ik} = \mathrm{F}
+    \end{cases},
+\qquad
+Q_{j,k}^{\star} = 
+    \begin{cases}
+        \lnot P_k &amp; \text{if} \;\; a_{jk} = \mathrm{T} \\
+        P_k &amp; \text{if} \;\; a_{jk} = \mathrm{F}
+    \end{cases},\]
+
+<p>则 <br /></p>
+
+\[\begin{align}
+H_A(x_1, x_2, \dots, x_n) = \mathrm{T}
+    &amp; \Leftrightarrow \hat{v}(A) = \mathrm{T} \\
+    &amp; \Leftrightarrow v(P_{i,k}^{\star}) = \mathrm{T} &amp; \text{for some } i, \text{ for all } k \\
+    &amp; \Leftrightarrow v(P_{k}) = x_i = a_{ik} &amp; \text{for some } i, \text{ for all } k \\
+    &amp; \Leftrightarrow (x_1, x_2, \dots, x_n) \in T_f \\
+    &amp; \Leftrightarrow f(x_1, x_2, \dots, x_n) = \mathrm{T}.
+\end{align}\]
+
+<p>类似地, <br /></p>
+
+\[\begin{align}
+H'_A(x_1, x_2, \dots, x_n) = \mathrm{F}
+    &amp; \Leftrightarrow \hat{v}(A') = \mathrm{F} \\
+    &amp; \Leftrightarrow v(Q_{j,k}^{\star}) = \mathrm{F} &amp; \text{for some } j, \text{ for all } k \\
+    &amp; \Leftrightarrow v(P_{k}) = x_j = b_{jk} &amp; \text{for some } j, \text{ for all } k \\
+    &amp; \Leftrightarrow (x_1, x_2, \dots, x_n) \in F_f \\
+    &amp; \Leftrightarrow f(x_1, x_2, \dots, x_n) = \mathrm{F}.
+\end{align}\]
+
+<p><span id="jump1.15"></span><br /><br /></p>
+
+<p><strong>命题1.15</strong> <br />
+<!--
+"$\Rightarrow$" : <br>
+令 $v$ 满足 $v(Q_i) = x_i$ 对 $1\le i\le n$ 成立, 则 <br>--></p>
+
+\[\begin{align}
+A\simeq B &amp; \Leftrightarrow v \vDash A \text{ iff } v \vDash B &amp; \text{ for all } v\\
+          &amp; \Leftrightarrow \hat{v}(A) = \hat{v}(B) &amp; \text{ for all } v \\
+          &amp; \Leftrightarrow H_A(v(Q_1),v(Q_2),\dots, v(Q_n)) = H_B(v(Q_1),v(Q_2),\dots, v(Q_n)) &amp; \text{ for all } v \\
+          &amp; \Leftrightarrow H_A(x_1,x_2,\dots,x_n) = H_B(x_1,x_2,\dots,x_n) &amp; \text{ for all } \vec{x}\\
+          &amp; \Leftrightarrow H_A = H_B
+\end{align}\]
+
+<!--$H_A(v(P_1), v(P_2), \dots, v(P_n)) = \hat{v}(A) = \mathrm{T}
+    \Leftrightarrow v \vDash A
+    \Leftrightarrow (v(P_1), v(P_2), \dots, v(P_n)) \in T_f
+    \Leftrightarrow f(v(P_1), v(P_2), \dots, v(P_n)) = \mathrm{T} $ -->
+
+<p><span id="jump1.16"></span><br /><br /></p>
+
+<p><strong>命题1.16</strong> <br /></p>
+
+\[H_A \xlongequal[]{1.10} f \xlongequal[]{1.12} H_B \xrightarrow{1.15} A \simeq B\]
+
+<!--
+$$
+\begin{matrix}
+A \simeq B(nf) & \simeq & 1 \\
+\downarrow &  & \uparrow \\
+H_A & = & f \\
+\end{matrix}
+$$
+-->
+
 
   </div>
 
@@ -157,6 +259,7 @@
     Powered By Jekyll
   </div>
 </nav>
+
 
   </body>
 

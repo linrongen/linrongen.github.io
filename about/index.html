@@ -45,15 +45,21 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
   <link rel="canonical" href="http://linrongen.github.io/about/">
   <link rel="alternate" type="application/rss+xml" title="Ronn's Blog" href="http://linrongen.github.io/feed.xml">
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        inlineMath: [['$','$']]
-        }
-    });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <head>
+        <script>MathJax = {
+            tex:{
+                    inlineMath: [['$', '$'], ['\\(', '\\)']]
+                },
+            svg:{
+                    fontCache: 'global'
+                }
+            };
+
+        </script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  </head>
+
 </head>
 
 
@@ -222,6 +228,7 @@
     Powered By Jekyll
   </div>
 </nav>
+
 
   </body>
 

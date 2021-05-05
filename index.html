@@ -45,15 +45,21 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
   <link rel="canonical" href="http://linrongen.github.io/">
   <link rel="alternate" type="application/rss+xml" title="Ronn's Blog" href="http://linrongen.github.io/feed.xml">
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        inlineMath: [['$','$']]
-        }
-    });
-</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <head>
+        <script>MathJax = {
+            tex:{
+                    inlineMath: [['$', '$'], ['\\(', '\\)']]
+                },
+            svg:{
+                    fontCache: 'global'
+                }
+            };
+
+        </script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" id="MathJax-script" async  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  </head>
+
 </head>
 
 
@@ -141,7 +147,7 @@
     <a class="post-title" href="/mathematical%20logic/math/2021/03/24/Hintikka_Set.html" > Midterm Notes of MathLogic</a>
     </div>
     <!--<div class="post-excerpt">
-      定义 3.25   设 $\mathscr{L}$ 为一阶语言, $\Phi$ 为 $\mathscr{L}$ 的公式集, 令 $T$ 为全体 $\mathscr{L}$ 项之集. $\Phi$ 为 Hintikka 集指: 若公式...
+      1.10, 1.12, 1.15, 1.16 $\S$ 1 定义1.10 \[H_A(v(P_1), v(P_2), \dots, v(P_n)) = \hat{v}(A),\] 其中 $FV(A)=\{v(P_1), v(P_2), \dots, v(P_n)\}$. 定理1.12 令...
     </div>-->
     <div class="posted">
       posted on
@@ -225,6 +231,7 @@ View PDF
     Powered By Jekyll
   </div>
 </nav>
+
 
   </body>
 
