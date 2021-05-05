@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+    <!--<title>Ronn's Blog</title>-->
     <title>Ronn's Blog</title>
-    <description>&lt;h3&gt;Hello, world!&lt;/h3&gt;&lt;h1&gt;Ronn's Blog&lt;/h1&gt;&lt;h3&gt;</description>
+    <description>&lt;h1 style='font-size : 40px'&gt;Ronn's Blog&lt;/h1&gt;&lt;h3&gt;</description>
     <link>http://linrongen.github.io/</link>
     <atom:link href="http://linrongen.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 24 Mar 2021 21:39:45 +0800</pubDate>
-    <lastBuildDate>Wed, 24 Mar 2021 21:39:45 +0800</lastBuildDate>
+    <pubDate>Wed, 05 May 2021 15:26:42 +0800</pubDate>
+    <lastBuildDate>Wed, 05 May 2021 15:26:42 +0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
-        <title>Hintikka Set</title>
+        <title>Midterm Notes of MathLogic</title>
+        <!--<title style='font-size : 40px'>Midterm Notes of MathLogic</title>-->
         <description>&lt;p&gt;&lt;strong&gt;定义 3.25&lt;/strong&gt;   设 $\mathscr{L}$ 为一阶语言, $\Phi$ 为 $\mathscr{L}$ 的公式集, 令 $T$ 为全体 $\mathscr{L}$ 项之集. $\Phi$ 为 Hintikka 集指:&lt;br /&gt;&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;若公式 $A$ 为原子的, 则 $A$ 和 $\lnot A$ 不能都属于 $\Phi$.&lt;/li&gt;
@@ -29,6 +31,7 @@
     
       <item>
         <title>Welcome to my blog!</title>
+        <!--<title style='font-size : 40px'>Welcome to my blog!</title>-->
         <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
@@ -55,6 +58,7 @@
     
       <item>
         <title>Open Topics IV: Lucas Theorem</title>
+        <!--<title style='font-size : 40px'>Open Topics IV: Lucas Theorem</title>-->
         <description>&lt;p&gt;A presentation (Open Topics) on “Lucas Theorem” and “Extended Lucas Method” given on &lt;a href=&quot;http://cslabcms.nju.edu.cn/problem_solving/index.php/2019%E7%BA%A7&quot;&gt;Problem Solving IV&lt;/a&gt;.&lt;/p&gt;
 &lt;style&gt;.pdf-embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-bottom: 20px; border-style: solid; } .pdf-link { background-color: white; text-align: center; border-style: solid; } .pdf-embed-container iframe, .pdf-embed-container object, .pdf-embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }&lt;/style&gt;
 &lt;div class=&quot;pdf-link&quot;&gt;&lt;a href=&quot;/pdf/Lucas_Theorem.pdf&quot; target=&quot;_blank&quot;&gt;View PDF&lt;/a&gt;&lt;/div&gt;
