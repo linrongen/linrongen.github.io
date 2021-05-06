@@ -6,8 +6,8 @@
     <description>&lt;h1 style='font-size : 40px'&gt;Ronn's Blog&lt;/h1&gt;&lt;h3&gt;</description>
     <link>http://linrongen.github.io/</link>
     <atom:link href="http://linrongen.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 06 May 2021 00:33:29 +0800</pubDate>
-    <lastBuildDate>Thu, 06 May 2021 00:33:29 +0800</lastBuildDate>
+    <pubDate>Thu, 06 May 2021 14:19:02 +0800</pubDate>
+    <lastBuildDate>Thu, 06 May 2021 14:19:02 +0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -18,7 +18,8 @@
 1. 若公式 $A$ 为原子的, 则 $A$ 和 $\lnot A$ 不能都属于 $\Phi$.
 --&gt;
 
-&lt;p&gt;&lt;a href=&quot;#jump1.10&quot;&gt;1.10&lt;/a&gt;, &lt;a href=&quot;#jump1.12&quot;&gt;1.12&lt;/a&gt;, &lt;a href=&quot;#jump1.15&quot;&gt;1.15&lt;/a&gt;, &lt;a href=&quot;#jump1.16&quot;&gt;1.16&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#jump1.10&quot;&gt;1.10&lt;/a&gt;, &lt;a href=&quot;#jump1.12&quot;&gt;1.12&lt;/a&gt;, &lt;a href=&quot;#jump1.15&quot;&gt;1.15&lt;/a&gt;, &lt;a href=&quot;#jump1.16&quot;&gt;1.16&lt;/a&gt;, &lt;a href=&quot;#jump1.26&quot;&gt;1.26&lt;/a&gt;; &lt;br /&gt;
+&lt;a href=&quot;#jump3.9&quot;&gt;3.9&lt;/a&gt;, &lt;a href=&quot;#jump3.23&quot;&gt;3.23&lt;/a&gt;, &lt;a href=&quot;#jump3.24&quot;&gt;3.24&lt;/a&gt;;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -26,15 +27,15 @@
 
 &lt;p&gt;&lt;span id=&quot;jump1.10&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;定义1.10&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定义 1.10&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
 
 \[H_A(v(P_1), v(P_2), \dots, v(P_n)) = \hat{v}(A),\]
 
-&lt;p&gt;其中 $FV(A)=\{v(P_1), v(P_2), \dots, v(P_n)\}$.&lt;/p&gt;
+&lt;p&gt;其中 $FV(A)=\{P_1, P_2, \dots, P_n\}$.&lt;/p&gt;
 
 &lt;p&gt;&lt;span id=&quot;jump1.12&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;定理1.12&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;定理 1.12&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;令 $v$ 满足 $v(P_i) = x_i$ 对 $1\le i\le n$ 成立. 再令 &lt;br /&gt;&lt;/p&gt;
 
@@ -79,7 +80,7 @@ H'_A(x_1, x_2, \dots, x_n) = \mathrm{F}
 
 &lt;p&gt;&lt;span id=&quot;jump1.15&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;命题1.15&lt;/strong&gt; &lt;br /&gt;
+&lt;p&gt;&lt;strong&gt;命题 1.15&lt;/strong&gt; &lt;br /&gt;
 &lt;!--
 &quot;$\Rightarrow$&quot; : &lt;br&gt;
 令 $v$ 满足 $v(Q_i) = x_i$ 对 $1\le i\le n$ 成立, 则 &lt;br&gt;--&gt;&lt;/p&gt;
@@ -89,7 +90,7 @@ A\simeq B &amp;amp; \Leftrightarrow v \vDash A \text{ iff } v \vDash B &amp;amp;
           &amp;amp; \Leftrightarrow \hat{v}(A) = \hat{v}(B) &amp;amp; \text{ for all } v \\
           &amp;amp; \Leftrightarrow H_A(v(Q_1),v(Q_2),\dots, v(Q_n)) = H_B(v(Q_1),v(Q_2),\dots, v(Q_n)) &amp;amp; \text{ for all } v \\
           &amp;amp; \Leftrightarrow H_A(x_1,x_2,\dots,x_n) = H_B(x_1,x_2,\dots,x_n) &amp;amp; \text{ for all } \vec{x}\\
-          &amp;amp; \Leftrightarrow H_A = H_B
+          &amp;amp; \Leftrightarrow H_A = H_B.
 \end{align}\]
 
 &lt;!--$H_A(v(P_1), v(P_2), \dots, v(P_n)) = \hat{v}(A) = \mathrm{T}
@@ -99,9 +100,15 @@ A\simeq B &amp;amp; \Leftrightarrow v \vDash A \text{ iff } v \vDash B &amp;amp;
 
 &lt;p&gt;&lt;span id=&quot;jump1.16&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;命题1.16&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;命题 1.16&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
 
 \[H_A \xlongequal[]{1.10} f \xlongequal[]{1.12} H_B \xrightarrow{1.15} A \simeq B\]
+
+&lt;p&gt;&lt;span id=&quot;jump1.26&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;命题 1.26&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+
+\[\Gamma \vdash \Delta \xrightarrow{\text{Soundness}} \Gamma \vDash \Delta \xrightarrow{\text{Completeness}} \Gamma\vdash_{\text{(with no cuts)}} \Delta\]
 
 &lt;!--
 $$
@@ -113,6 +120,89 @@ H_A &amp; = &amp; f \\
 $$
 --&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;center&gt;&lt;h2 style=&quot;font-size : 40px&quot;&gt;$\S$ 3&lt;/h2&gt;&lt;/center&gt;
+
+&lt;p&gt;&lt;span id=&quot;jump3.9&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;定义 3.9&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;此处 $\mathscr{L}$ 的模型本为 $(\mathbb{M},I)$, 但习惯上常用 $M$ 替代 $\mathbb{M}$.&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;jump3.23&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;引理 3.23&lt;/strong&gt;&lt;/p&gt;
+
+\[\begin{align}
+(f(u)[\frac{s}{x}])_{M[\sigma]}
+&amp;amp; \xlongequal{3.6} (f(u[\frac{s}{x}]))_{M[\sigma]} \\
+&amp;amp; \xlongequal{3.10} f_M((u[\frac{s}{x}])_{M[\sigma]}) \\
+&amp;amp; \xlongequal{\text{I.H.}} f_M(u_{M[\sigma[x:=s_{M[\sigma]}]]}) \\
+&amp;amp; \xlongequal{3.10} (f(u))_{M[\sigma[x:=s_{M[\sigma]}]]}.
+\end{align}\]
+
+&lt;p&gt;&lt;span id=&quot;jump3.24&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;引理 3.24&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+
+\[(A[\frac{t}{x}])_{M[\sigma]} = A_{M[\sigma[x:=t_{M[\sigma]}]]} \triangleq A_{M[\rho]}\]
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;$ A = (u \doteq v) $ &lt;br /&gt;&lt;/p&gt;
+
+\[\begin{align}
+((u \doteq v)[\frac{t}{x}])_{M[\sigma]}
+&amp;amp; = (u[\frac{t}{x}] \doteq v[\frac{t}{x}])_{M[\sigma]}\\
+&amp;amp; = [(u[\frac{t}{x}])_{M[\sigma]} = (v[\frac{t}{x}])_{M[\sigma]}]\\
+&amp;amp; = [u_{M[\rho]} = v_{M[\rho]}] = (u \doteq v)_{M[\rho]}.
+\end{align}\]
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;$ A = P(t_1,\dots,t_n) $ &lt;br /&gt;&lt;/p&gt;
+
+\[\begin{align}
+(P(\vec{t})[\frac{t}{x}])_{M[\sigma]}
+&amp;amp; = (P(t_1[\frac{t}{x}],\dots,t_n[\frac{t}{x}]))_{M[\sigma]}\\
+&amp;amp; = [((t_1[\frac{t}{x}])_{M[\sigma]},\dots,(t_n[\frac{t}{x}])_{M[\sigma]}) \in P_M]\\
+&amp;amp; = [((t_1)_{M[\rho]},\dots,(t_n)_{M[\rho]}) \in P_M] = (P(\vec{t}))_{M[\rho]}.
+\end{align}\]
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;$ A = \lnot B$ &lt;br /&gt;&lt;/p&gt;
+
+\[\begin{align}
+((\lnot B)[\frac{t}{x}])_{M[\sigma]}
+&amp;amp; = (\lnot(B[\frac{t}{x}]))_{M[\sigma]}\\
+&amp;amp; = \mathbf{B}_{\lnot} ((B[\frac{t}{x}])_{M[\sigma]})\\
+&amp;amp; = \mathbf{B}_{\lnot} (B_{M[\rho]}) = (\lnot B)_{M[\rho]}.
+\end{align}\]
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;$ A = B \star C$ &lt;br /&gt;&lt;/p&gt;
+
+\[\begin{align}
+((B\star C)[\frac{t}{x}])_{M[\sigma]}
+&amp;amp; = ((B[\frac{t}{x}]) \star (C[\frac{t}{x}]))_{M[\sigma]}\\
+&amp;amp; = \mathbf{B}_{\star} ((B[\frac{t}{x}])_{M[\sigma]}, (C[\frac{t}{x}])_{M[\sigma]})\\
+&amp;amp; = \mathbf{B}_{\star} (B_{M[\rho]}, C_{M[\rho]}) = (B \star C)_{M[\rho]}.
+\end{align}\]
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;$A = Q y. B$, $\quad$ $y\equiv x$ &lt;br /&gt;&lt;/p&gt;
+
+\[((Q y. B)[\frac{t}{x}])_{M[\sigma]}
+ = (Q y. B)_{M[\sigma]}
+ = (Q y. B)_{M[\rho]}.\]
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;$A = \forall y. B$, $\quad$ $y\not \equiv x$, $\quad$  $y\notin FV(t)$&lt;br /&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 24 Mar 2021 13:00:00 +0800</pubDate>
         <link>http://linrongen.github.io/mathematical%20logic/math/2021/03/24/Hintikka_Set.html</link>

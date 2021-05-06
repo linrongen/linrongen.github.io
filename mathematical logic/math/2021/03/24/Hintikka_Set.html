@@ -153,7 +153,8 @@
 1. 若公式 $A$ 为原子的, 则 $A$ 和 $\lnot A$ 不能都属于 $\Phi$.
 -->
 
-<p><a href="#jump1.10">1.10</a>, <a href="#jump1.12">1.12</a>, <a href="#jump1.15">1.15</a>, <a href="#jump1.16">1.16</a></p>
+<p><a href="#jump1.10">1.10</a>, <a href="#jump1.12">1.12</a>, <a href="#jump1.15">1.15</a>, <a href="#jump1.16">1.16</a>, <a href="#jump1.26">1.26</a>; <br />
+<a href="#jump3.9">3.9</a>, <a href="#jump3.23">3.23</a>, <a href="#jump3.24">3.24</a>;</p>
 
 <p><br /><br /></p>
 
@@ -161,15 +162,15 @@
 
 <p><span id="jump1.10"></span><br /><br /></p>
 
-<p><strong>定义1.10</strong> <br /></p>
+<p><strong>定义 1.10</strong> <br /></p>
 
 \[H_A(v(P_1), v(P_2), \dots, v(P_n)) = \hat{v}(A),\]
 
-<p>其中 $FV(A)=\{v(P_1), v(P_2), \dots, v(P_n)\}$.</p>
+<p>其中 $FV(A)=\{P_1, P_2, \dots, P_n\}$.</p>
 
 <p><span id="jump1.12"></span><br /><br /></p>
 
-<p><strong>定理1.12</strong> <br /></p>
+<p><strong>定理 1.12</strong> <br /></p>
 
 <p>令 $v$ 满足 $v(P_i) = x_i$ 对 $1\le i\le n$ 成立. 再令 <br /></p>
 
@@ -214,7 +215,7 @@ H'_A(x_1, x_2, \dots, x_n) = \mathrm{F}
 
 <p><span id="jump1.15"></span><br /><br /></p>
 
-<p><strong>命题1.15</strong> <br />
+<p><strong>命题 1.15</strong> <br />
 <!--
 "$\Rightarrow$" : <br>
 令 $v$ 满足 $v(Q_i) = x_i$ 对 $1\le i\le n$ 成立, 则 <br>--></p>
@@ -224,7 +225,7 @@ A\simeq B &amp; \Leftrightarrow v \vDash A \text{ iff } v \vDash B &amp; \text{ 
           &amp; \Leftrightarrow \hat{v}(A) = \hat{v}(B) &amp; \text{ for all } v \\
           &amp; \Leftrightarrow H_A(v(Q_1),v(Q_2),\dots, v(Q_n)) = H_B(v(Q_1),v(Q_2),\dots, v(Q_n)) &amp; \text{ for all } v \\
           &amp; \Leftrightarrow H_A(x_1,x_2,\dots,x_n) = H_B(x_1,x_2,\dots,x_n) &amp; \text{ for all } \vec{x}\\
-          &amp; \Leftrightarrow H_A = H_B
+          &amp; \Leftrightarrow H_A = H_B.
 \end{align}\]
 
 <!--$H_A(v(P_1), v(P_2), \dots, v(P_n)) = \hat{v}(A) = \mathrm{T}
@@ -234,9 +235,15 @@ A\simeq B &amp; \Leftrightarrow v \vDash A \text{ iff } v \vDash B &amp; \text{ 
 
 <p><span id="jump1.16"></span><br /><br /></p>
 
-<p><strong>命题1.16</strong> <br /></p>
+<p><strong>命题 1.16</strong> <br /></p>
 
 \[H_A \xlongequal[]{1.10} f \xlongequal[]{1.12} H_B \xrightarrow{1.15} A \simeq B\]
+
+<p><span id="jump1.26"></span><br /><br /></p>
+
+<p><strong>命题 1.26</strong> <br /></p>
+
+\[\Gamma \vdash \Delta \xrightarrow{\text{Soundness}} \Gamma \vDash \Delta \xrightarrow{\text{Completeness}} \Gamma\vdash_{\text{(with no cuts)}} \Delta\]
 
 <!--
 $$
@@ -248,6 +255,89 @@ H_A & = & f \\
 $$
 -->
 
+<p><br /><br /><br /></p>
+
+<center><h2 style="font-size : 40px">$\S$ 3</h2></center>
+
+<p><span id="jump3.9"></span><br /><br /></p>
+
+<p><strong>定义 3.9</strong> <br /></p>
+
+<p>此处 $\mathscr{L}$ 的模型本为 $(\mathbb{M},I)$, 但习惯上常用 $M$ 替代 $\mathbb{M}$.</p>
+
+<p><span id="jump3.23"></span><br /><br /></p>
+
+<p><strong>引理 3.23</strong></p>
+
+\[\begin{align}
+(f(u)[\frac{s}{x}])_{M[\sigma]}
+&amp; \xlongequal{3.6} (f(u[\frac{s}{x}]))_{M[\sigma]} \\
+&amp; \xlongequal{3.10} f_M((u[\frac{s}{x}])_{M[\sigma]}) \\
+&amp; \xlongequal{\text{I.H.}} f_M(u_{M[\sigma[x:=s_{M[\sigma]}]]}) \\
+&amp; \xlongequal{3.10} (f(u))_{M[\sigma[x:=s_{M[\sigma]}]]}.
+\end{align}\]
+
+<p><span id="jump3.24"></span><br /><br /></p>
+
+<p><strong>引理 3.24</strong> <br /></p>
+
+\[(A[\frac{t}{x}])_{M[\sigma]} = A_{M[\sigma[x:=t_{M[\sigma]}]]} \triangleq A_{M[\rho]}\]
+
+<p><br /></p>
+
+<p>$ A = (u \doteq v) $ <br /></p>
+
+\[\begin{align}
+((u \doteq v)[\frac{t}{x}])_{M[\sigma]}
+&amp; = (u[\frac{t}{x}] \doteq v[\frac{t}{x}])_{M[\sigma]}\\
+&amp; = [(u[\frac{t}{x}])_{M[\sigma]} = (v[\frac{t}{x}])_{M[\sigma]}]\\
+&amp; = [u_{M[\rho]} = v_{M[\rho]}] = (u \doteq v)_{M[\rho]}.
+\end{align}\]
+
+<p><br /></p>
+
+<p>$ A = P(t_1,\dots,t_n) $ <br /></p>
+
+\[\begin{align}
+(P(\vec{t})[\frac{t}{x}])_{M[\sigma]}
+&amp; = (P(t_1[\frac{t}{x}],\dots,t_n[\frac{t}{x}]))_{M[\sigma]}\\
+&amp; = [((t_1[\frac{t}{x}])_{M[\sigma]},\dots,(t_n[\frac{t}{x}])_{M[\sigma]}) \in P_M]\\
+&amp; = [((t_1)_{M[\rho]},\dots,(t_n)_{M[\rho]}) \in P_M] = (P(\vec{t}))_{M[\rho]}.
+\end{align}\]
+
+<p><br /></p>
+
+<p>$ A = \lnot B$ <br /></p>
+
+\[\begin{align}
+((\lnot B)[\frac{t}{x}])_{M[\sigma]}
+&amp; = (\lnot(B[\frac{t}{x}]))_{M[\sigma]}\\
+&amp; = \mathbf{B}_{\lnot} ((B[\frac{t}{x}])_{M[\sigma]})\\
+&amp; = \mathbf{B}_{\lnot} (B_{M[\rho]}) = (\lnot B)_{M[\rho]}.
+\end{align}\]
+
+<p><br /></p>
+
+<p>$ A = B \star C$ <br /></p>
+
+\[\begin{align}
+((B\star C)[\frac{t}{x}])_{M[\sigma]}
+&amp; = ((B[\frac{t}{x}]) \star (C[\frac{t}{x}]))_{M[\sigma]}\\
+&amp; = \mathbf{B}_{\star} ((B[\frac{t}{x}])_{M[\sigma]}, (C[\frac{t}{x}])_{M[\sigma]})\\
+&amp; = \mathbf{B}_{\star} (B_{M[\rho]}, C_{M[\rho]}) = (B \star C)_{M[\rho]}.
+\end{align}\]
+
+<p><br /></p>
+
+<p>$A = Q y. B$, $\quad$ $y\equiv x$ <br /></p>
+
+\[((Q y. B)[\frac{t}{x}])_{M[\sigma]}
+ = (Q y. B)_{M[\sigma]}
+ = (Q y. B)_{M[\rho]}.\]
+
+<p><br /></p>
+
+<p>$A = \forall y. B$, $\quad$ $y\not \equiv x$, $\quad$  $y\notin FV(t)$<br /></p>
 
   </div>
 
