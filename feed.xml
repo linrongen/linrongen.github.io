@@ -6,8 +6,8 @@
     <description>&lt;h1 style='font-size : 40px'&gt;Ronn's Blog&lt;/h1&gt;&lt;h3&gt;</description>
     <link>http://linrongen.github.io/</link>
     <atom:link href="http://linrongen.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 07 May 2021 11:31:00 +0800</pubDate>
-    <lastBuildDate>Fri, 07 May 2021 11:31:00 +0800</lastBuildDate>
+    <pubDate>Fri, 07 May 2021 23:40:49 +0800</pubDate>
+    <lastBuildDate>Fri, 07 May 2021 23:40:49 +0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -19,9 +19,9 @@
 --&gt;
 
 &lt;p&gt;&lt;a href=&quot;#jump1.10&quot;&gt;1.10&lt;/a&gt;, &lt;a href=&quot;#jump1.12&quot;&gt;1.12&lt;/a&gt;, &lt;a href=&quot;#jump1.15&quot;&gt;1.15&lt;/a&gt;, &lt;a href=&quot;#jump1.16&quot;&gt;1.16&lt;/a&gt;, &lt;a href=&quot;#jump1.26&quot;&gt;1.26&lt;/a&gt;; &lt;br /&gt;
-&lt;a href=&quot;#jump3.9&quot;&gt;3.9&lt;/a&gt;, &lt;a href=&quot;#jump3.23&quot;&gt;3.23&lt;/a&gt;, &lt;a href=&quot;#jump3.24&quot;&gt;3.24&lt;/a&gt;, &lt;a href=&quot;#jump3.28&quot;&gt;3.28&lt;/a&gt;, &lt;a href=&quot;#jump3.32&quot;&gt;3.32&lt;/a&gt;, &lt;a href=&quot;#jump3.33&quot;&gt;3.33&lt;/a&gt;;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;a href=&quot;#jump3.9&quot;&gt;3.9&lt;/a&gt;, &lt;a href=&quot;#jump3.23&quot;&gt;3.23&lt;/a&gt;, &lt;a href=&quot;#jump3.24&quot;&gt;3.24&lt;/a&gt;, &lt;a href=&quot;#jump3.28&quot;&gt;3.28&lt;/a&gt;, &lt;a href=&quot;#jump3.32&quot;&gt;3.32&lt;/a&gt;, &lt;a href=&quot;#jump3.33&quot;&gt;3.33&lt;/a&gt;; &lt;br /&gt;
+&lt;a href=&quot;#jump4.1&quot;&gt;4.1&lt;/a&gt;, &lt;a href=&quot;#jump4.5&quot;&gt;4.5&lt;/a&gt;, &lt;a href=&quot;#jump4.?&quot;&gt;4.?&lt;/a&gt;, &lt;a href=&quot;#jump4.10&quot;&gt;4.10&lt;/a&gt;, &lt;a href=&quot;#jump4.12&quot;&gt;4.12&lt;/a&gt;.
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;center&gt;&lt;h2 style=&quot;font-size : 40px&quot;&gt;$\S$ 1&lt;/h2&gt;&lt;/center&gt;
 
@@ -311,6 +311,154 @@ A \in \varPsi &amp;amp; \Rightarrow \forall x. B \in \varPsi\\
 
 &lt;center&gt;&lt;h2 style=&quot;font-size : 40px&quot;&gt;$\S$ 4&lt;/h2&gt;&lt;/center&gt;
 
+&lt;p&gt;&lt;span id=&quot;jump4.1&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;定义 4.1&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+
+\[\dfrac{
+    \dfrac{Q(x), \exists y Q(y) \vdash \exists Q(x), z Q(z)}
+        {Q(x), \exists y Q(y) \vdash \exists z Q(z)}}
+    {\exists y Q(y) \vdash \exists z Q(z)}\]
+
+\[\dfrac{
+    \dfrac{Q(x), \forall y Q(y) \vdash Q(x),\forall z Q(z)}
+        {\forall y Q(y) \vdash Q(x),\forall z Q(z)}}
+    {\forall y Q(y) \vdash \forall z Q(z)}\]
+
+&lt;p&gt;其中 $x$ 为新变元.&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;jump4.5&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;命题 4.5&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;”$\Rightarrow$” &lt;br /&gt;&lt;/p&gt;
+
+\[\dfrac{
+    \underline{A_1,\dots, A_m \vdash B_1, \dots, B_n}}{
+    \dfrac{\underline{\bigwedge_{i=1}^m A_i \vdash B_1, \dots, B_n}}
+    {\bigwedge_{i=1}^m A_i \vdash \bigvee_{i=1}^n B_i}
+}\]
+
+&lt;p&gt;”$\Leftarrow$” &lt;br /&gt;&lt;/p&gt;
+
+\[\dfrac{\dfrac{
+    \underline{\{A_1, \dots, A_m \vdash A_i \mid  i=1, \dots, m\}}}{
+    A_1, \dots, A_m \vdash \bigwedge_{i=1}^m A_i}
+    \quad \dfrac{
+    \bigwedge_{i=1}^m A_i \vdash \bigvee_{i=1}^n B_i \quad \dfrac{\underline{
+    \{B_i \mid B_1, \dots, B_n \mid  i=1, \dots, n\}}}{
+    \bigwedge_{i=1}^m B_i \vdash B_1, \dots, B_n}}{
+    \bigwedge_{i=1}^m A_i \vdash B_1, \dots, B_n}}
+    {A_1,\dots, A_m \vdash B_1, \dots, B_n}\]
+
+&lt;p&gt;&lt;span id=&quot;jump4.?&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;导出规则&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;$
+\dfrac{\lnot A, \Gamma \vdash B \quad \lnot A, \Gamma \vdash \lnot B} {\Gamma \vdash A}
+$&lt;/p&gt;
+
+\[\dfrac{
+\dfrac{
+\dfrac{
+\dfrac{\lnot A,\Gamma \vdash B}
+{\overline{\lnot A,\Gamma \vdash \lnot \lnot B}} \quad
+\dfrac{\lnot A, \Gamma \vdash \lnot B}{\lnot A, \Gamma, \lnot \lnot B \vdash} }
+{\lnot A,\Gamma \vdash}}
+{\Gamma \vdash \lnot \lnot A} \quad
+\lnot \lnot A \vdash A}
+{\Gamma \vdash A}\]
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;$
+\dfrac{A,\Gamma \vdash B \quad
+\lnot A, \Gamma \vdash B}
+{\Gamma \vdash B}
+$&lt;/p&gt;
+
+\[\dfrac{
+\dfrac{A,\Gamma\vdash B}
+{\Gamma \vdash B, \lnot A} \quad
+\lnot A, \Gamma \vdash B}
+{\Gamma \vdash B}\]
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;$
+\dfrac{\Gamma \vdash A \rightarrow B} {\Gamma \vdash \lnot B \rightarrow \lnot A}
+$&lt;/p&gt;
+
+\[\dfrac{\Gamma \vdash A \rightarrow B \quad A \rightarrow B \vdash \lnot B \rightarrow \lnot A} {\Gamma \vdash \lnot B \rightarrow \lnot A}\]
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;$\dfrac{\Gamma \vdash A \quad \Gamma \vdash \lnot A} {\Gamma \vdash B}$&lt;/p&gt;
+
+\[\dfrac{
+    \dfrac{\Gamma \vdash A}
+    {\lnot A, \Gamma \vdash}
+    \quad \Gamma \vdash \lnot A} {\Gamma \vdash}\]
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;$
+\dfrac{\Gamma \vdash A \quad \Gamma \vdash A \rightarrow B} {\Gamma \vdash B}
+$&lt;/p&gt;
+
+\[\dfrac{\Gamma \vdash A\rightarrow B \quad \dfrac{\Gamma, B \vdash B \quad \dfrac{\Gamma \vdash A}{\Gamma \vdash A, B}}{\Gamma, A \rightarrow B \vdash B}} {\Gamma \vdash B}\]
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;$
+\dfrac{\Gamma \vdash A(t) \quad \Gamma \vdash \forall x(A(x)\rightarrow B(x))}{\Gamma \vdash B(t)}
+$&lt;/p&gt;
+
+\[\dfrac{
+    \dfrac {
+        \dfrac{
+            \dfrac{\Gamma \vdash A(t)}
+            {\Gamma, \forall x(A(x)\rightarrow B(x))\vdash A(t),B(t)}
+        }
+        {\Gamma, \forall x(A(x)\rightarrow B(x)), A(t)\rightarrow B(t) \vdash B(t)}
+    }
+    {
+        \Gamma, \forall x(A(x)\rightarrow B(x)) \vdash B(t)
+    }
+    \quad \Gamma \vdash \forall x(A(x)\rightarrow B(x))}{\Gamma \vdash B(t)}\]
+
+&lt;p&gt;或使用 $\text{MP}$ 规则.&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;jump4.10&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;引理 4.10&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;反例: &lt;br /&gt;
+\(\dfrac{\vdash \lnot (A \lor \lnot A) \quad \lnot (A\lor \lnot A) \vdash (A \lor \lnot A)} {\vdash A \lor \lnot A}\)&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;jump4.12&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;命题 4.12&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;证法一: 归纳 (影子模仿术). &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;证法二: 令 $\Delta = {A_1, A_2, \dots, A_n}$. &lt;br /&gt;&lt;/p&gt;
+
+\[\dfrac{
+\dfrac{
+    \dfrac {
+        \dfrac {\dfrac{\Gamma \vdash \Delta}{\Gamma\vdash \varPsi, \Delta}} {\cdots}
+    }{
+    \Gamma \vdash \varPsi, A_1, A_2}
+    \quad A_1,A_2 \vdash A_1
+}{
+    \Gamma \vdash \varPsi, A_1}
+    \quad A_1, \Theta \vdash \Delta
+}
+{\Gamma, \Theta \vdash \Delta, \varPsi}\]
+
+&lt;p&gt;证法三: 语义.&lt;/p&gt;
 </description>
         <pubDate>Wed, 24 Mar 2021 13:00:00 +0800</pubDate>
         <link>http://linrongen.github.io/mathematical%20logic/math/2021/03/24/Hintikka_Set.html</link>

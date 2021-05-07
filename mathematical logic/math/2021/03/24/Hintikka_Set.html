@@ -154,9 +154,9 @@
 -->
 
 <p><a href="#jump1.10">1.10</a>, <a href="#jump1.12">1.12</a>, <a href="#jump1.15">1.15</a>, <a href="#jump1.16">1.16</a>, <a href="#jump1.26">1.26</a>; <br />
-<a href="#jump3.9">3.9</a>, <a href="#jump3.23">3.23</a>, <a href="#jump3.24">3.24</a>, <a href="#jump3.28">3.28</a>, <a href="#jump3.32">3.32</a>, <a href="#jump3.33">3.33</a>;</p>
-
-<p><br /><br /></p>
+<a href="#jump3.9">3.9</a>, <a href="#jump3.23">3.23</a>, <a href="#jump3.24">3.24</a>, <a href="#jump3.28">3.28</a>, <a href="#jump3.32">3.32</a>, <a href="#jump3.33">3.33</a>; <br />
+<a href="#jump4.1">4.1</a>, <a href="#jump4.5">4.5</a>, <a href="#jump4.?">4.?</a>, <a href="#jump4.10">4.10</a>, <a href="#jump4.12">4.12</a>.
+<br /><br /></p>
 
 <center><h2 style="font-size : 40px">$\S$ 1</h2></center>
 
@@ -446,6 +446,154 @@ A \in \varPsi &amp; \Rightarrow \forall x. B \in \varPsi\\
 
 <center><h2 style="font-size : 40px">$\S$ 4</h2></center>
 
+<p><span id="jump4.1"></span><br /><br /></p>
+
+<p><strong>定义 4.1</strong> <br /></p>
+
+\[\dfrac{
+    \dfrac{Q(x), \exists y Q(y) \vdash \exists Q(x), z Q(z)}
+        {Q(x), \exists y Q(y) \vdash \exists z Q(z)}}
+    {\exists y Q(y) \vdash \exists z Q(z)}\]
+
+\[\dfrac{
+    \dfrac{Q(x), \forall y Q(y) \vdash Q(x),\forall z Q(z)}
+        {\forall y Q(y) \vdash Q(x),\forall z Q(z)}}
+    {\forall y Q(y) \vdash \forall z Q(z)}\]
+
+<p>其中 $x$ 为新变元.</p>
+
+<p><span id="jump4.5"></span><br /><br /></p>
+
+<p><strong>命题 4.5</strong> <br /></p>
+
+<p>”$\Rightarrow$” <br /></p>
+
+\[\dfrac{
+    \underline{A_1,\dots, A_m \vdash B_1, \dots, B_n}}{
+    \dfrac{\underline{\bigwedge_{i=1}^m A_i \vdash B_1, \dots, B_n}}
+    {\bigwedge_{i=1}^m A_i \vdash \bigvee_{i=1}^n B_i}
+}\]
+
+<p>”$\Leftarrow$” <br /></p>
+
+\[\dfrac{\dfrac{
+    \underline{\{A_1, \dots, A_m \vdash A_i \mid  i=1, \dots, m\}}}{
+    A_1, \dots, A_m \vdash \bigwedge_{i=1}^m A_i}
+    \quad \dfrac{
+    \bigwedge_{i=1}^m A_i \vdash \bigvee_{i=1}^n B_i \quad \dfrac{\underline{
+    \{B_i \mid B_1, \dots, B_n \mid  i=1, \dots, n\}}}{
+    \bigwedge_{i=1}^m B_i \vdash B_1, \dots, B_n}}{
+    \bigwedge_{i=1}^m A_i \vdash B_1, \dots, B_n}}
+    {A_1,\dots, A_m \vdash B_1, \dots, B_n}\]
+
+<p><span id="jump4.?"></span><br /><br /></p>
+
+<p><strong>导出规则</strong> <br /></p>
+
+<p>$
+\dfrac{\lnot A, \Gamma \vdash B \quad \lnot A, \Gamma \vdash \lnot B} {\Gamma \vdash A}
+$</p>
+
+\[\dfrac{
+\dfrac{
+\dfrac{
+\dfrac{\lnot A,\Gamma \vdash B}
+{\overline{\lnot A,\Gamma \vdash \lnot \lnot B}} \quad
+\dfrac{\lnot A, \Gamma \vdash \lnot B}{\lnot A, \Gamma, \lnot \lnot B \vdash} }
+{\lnot A,\Gamma \vdash}}
+{\Gamma \vdash \lnot \lnot A} \quad
+\lnot \lnot A \vdash A}
+{\Gamma \vdash A}\]
+
+<p><br /></p>
+
+<p>$
+\dfrac{A,\Gamma \vdash B \quad
+\lnot A, \Gamma \vdash B}
+{\Gamma \vdash B}
+$</p>
+
+\[\dfrac{
+\dfrac{A,\Gamma\vdash B}
+{\Gamma \vdash B, \lnot A} \quad
+\lnot A, \Gamma \vdash B}
+{\Gamma \vdash B}\]
+
+<p><br /></p>
+
+<p>$
+\dfrac{\Gamma \vdash A \rightarrow B} {\Gamma \vdash \lnot B \rightarrow \lnot A}
+$</p>
+
+\[\dfrac{\Gamma \vdash A \rightarrow B \quad A \rightarrow B \vdash \lnot B \rightarrow \lnot A} {\Gamma \vdash \lnot B \rightarrow \lnot A}\]
+
+<p><br /></p>
+
+<p>$\dfrac{\Gamma \vdash A \quad \Gamma \vdash \lnot A} {\Gamma \vdash B}$</p>
+
+\[\dfrac{
+    \dfrac{\Gamma \vdash A}
+    {\lnot A, \Gamma \vdash}
+    \quad \Gamma \vdash \lnot A} {\Gamma \vdash}\]
+
+<p><br /></p>
+
+<p>$
+\dfrac{\Gamma \vdash A \quad \Gamma \vdash A \rightarrow B} {\Gamma \vdash B}
+$</p>
+
+\[\dfrac{\Gamma \vdash A\rightarrow B \quad \dfrac{\Gamma, B \vdash B \quad \dfrac{\Gamma \vdash A}{\Gamma \vdash A, B}}{\Gamma, A \rightarrow B \vdash B}} {\Gamma \vdash B}\]
+
+<p><br /></p>
+
+<p>$
+\dfrac{\Gamma \vdash A(t) \quad \Gamma \vdash \forall x(A(x)\rightarrow B(x))}{\Gamma \vdash B(t)}
+$</p>
+
+\[\dfrac{
+    \dfrac {
+        \dfrac{
+            \dfrac{\Gamma \vdash A(t)}
+            {\Gamma, \forall x(A(x)\rightarrow B(x))\vdash A(t),B(t)}
+        }
+        {\Gamma, \forall x(A(x)\rightarrow B(x)), A(t)\rightarrow B(t) \vdash B(t)}
+    }
+    {
+        \Gamma, \forall x(A(x)\rightarrow B(x)) \vdash B(t)
+    }
+    \quad \Gamma \vdash \forall x(A(x)\rightarrow B(x))}{\Gamma \vdash B(t)}\]
+
+<p>或使用 $\text{MP}$ 规则.</p>
+
+<p><span id="jump4.10"></span><br /><br /></p>
+
+<p><strong>引理 4.10</strong> <br /></p>
+
+<p>反例: <br />
+\(\dfrac{\vdash \lnot (A \lor \lnot A) \quad \lnot (A\lor \lnot A) \vdash (A \lor \lnot A)} {\vdash A \lor \lnot A}\)</p>
+
+<p><span id="jump4.12"></span><br /><br /></p>
+
+<p><strong>命题 4.12</strong> <br /></p>
+
+<p>证法一: 归纳 (影子模仿术). <br /></p>
+
+<p>证法二: 令 $\Delta = {A_1, A_2, \dots, A_n}$. <br /></p>
+
+\[\dfrac{
+\dfrac{
+    \dfrac {
+        \dfrac {\dfrac{\Gamma \vdash \Delta}{\Gamma\vdash \varPsi, \Delta}} {\cdots}
+    }{
+    \Gamma \vdash \varPsi, A_1, A_2}
+    \quad A_1,A_2 \vdash A_1
+}{
+    \Gamma \vdash \varPsi, A_1}
+    \quad A_1, \Theta \vdash \Delta
+}
+{\Gamma, \Theta \vdash \Delta, \varPsi}\]
+
+<p>证法三: 语义.</p>
 
   </div>
 
