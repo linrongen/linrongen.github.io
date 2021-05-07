@@ -6,8 +6,8 @@
     <description>&lt;h1 style='font-size : 40px'&gt;Ronn's Blog&lt;/h1&gt;&lt;h3&gt;</description>
     <link>http://linrongen.github.io/</link>
     <atom:link href="http://linrongen.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 06 May 2021 14:19:02 +0800</pubDate>
-    <lastBuildDate>Thu, 06 May 2021 14:19:02 +0800</lastBuildDate>
+    <pubDate>Fri, 07 May 2021 11:31:00 +0800</pubDate>
+    <lastBuildDate>Fri, 07 May 2021 11:31:00 +0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -19,7 +19,7 @@
 --&gt;
 
 &lt;p&gt;&lt;a href=&quot;#jump1.10&quot;&gt;1.10&lt;/a&gt;, &lt;a href=&quot;#jump1.12&quot;&gt;1.12&lt;/a&gt;, &lt;a href=&quot;#jump1.15&quot;&gt;1.15&lt;/a&gt;, &lt;a href=&quot;#jump1.16&quot;&gt;1.16&lt;/a&gt;, &lt;a href=&quot;#jump1.26&quot;&gt;1.26&lt;/a&gt;; &lt;br /&gt;
-&lt;a href=&quot;#jump3.9&quot;&gt;3.9&lt;/a&gt;, &lt;a href=&quot;#jump3.23&quot;&gt;3.23&lt;/a&gt;, &lt;a href=&quot;#jump3.24&quot;&gt;3.24&lt;/a&gt;;&lt;/p&gt;
+&lt;a href=&quot;#jump3.9&quot;&gt;3.9&lt;/a&gt;, &lt;a href=&quot;#jump3.23&quot;&gt;3.23&lt;/a&gt;, &lt;a href=&quot;#jump3.24&quot;&gt;3.24&lt;/a&gt;, &lt;a href=&quot;#jump3.28&quot;&gt;3.28&lt;/a&gt;, &lt;a href=&quot;#jump3.32&quot;&gt;3.32&lt;/a&gt;, &lt;a href=&quot;#jump3.33&quot;&gt;3.33&lt;/a&gt;;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -148,8 +148,6 @@ $$
 
 \[(A[\frac{t}{x}])_{M[\sigma]} = A_{M[\sigma[x:=t_{M[\sigma]}]]} \triangleq A_{M[\rho]}\]
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
 &lt;p&gt;$ A = (u \doteq v) $ &lt;br /&gt;&lt;/p&gt;
 
 \[\begin{align}
@@ -158,8 +156,6 @@ $$
 &amp;amp; = [(u[\frac{t}{x}])_{M[\sigma]} = (v[\frac{t}{x}])_{M[\sigma]}]\\
 &amp;amp; = [u_{M[\rho]} = v_{M[\rho]}] = (u \doteq v)_{M[\rho]}.
 \end{align}\]
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;$ A = P(t_1,\dots,t_n) $ &lt;br /&gt;&lt;/p&gt;
 
@@ -170,8 +166,6 @@ $$
 &amp;amp; = [((t_1)_{M[\rho]},\dots,(t_n)_{M[\rho]}) \in P_M] = (P(\vec{t}))_{M[\rho]}.
 \end{align}\]
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
 &lt;p&gt;$ A = \lnot B$ &lt;br /&gt;&lt;/p&gt;
 
 \[\begin{align}
@@ -180,8 +174,6 @@ $$
 &amp;amp; = \mathbf{B}_{\lnot} ((B[\frac{t}{x}])_{M[\sigma]})\\
 &amp;amp; = \mathbf{B}_{\lnot} (B_{M[\rho]}) = (\lnot B)_{M[\rho]}.
 \end{align}\]
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;$ A = B \star C$ &lt;br /&gt;&lt;/p&gt;
 
@@ -192,17 +184,133 @@ $$
 &amp;amp; = \mathbf{B}_{\star} (B_{M[\rho]}, C_{M[\rho]}) = (B \star C)_{M[\rho]}.
 \end{align}\]
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
 &lt;p&gt;$A = Q y. B$, $\quad$ $y\equiv x$ &lt;br /&gt;&lt;/p&gt;
 
 \[((Q y. B)[\frac{t}{x}])_{M[\sigma]}
  = (Q y. B)_{M[\sigma]}
  = (Q y. B)_{M[\rho]}.\]
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;$A = \forall y. B$, $\quad$ $y\not \equiv x$, $\quad$  $y\notin FV(t)$ &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;$A = \forall y. B$, $\quad$ $y\not \equiv x$, $\quad$  $y\notin FV(t)$&lt;br /&gt;&lt;/p&gt;
+\[\begin{align}
+((\forall y. B)[\frac{t}{x}])_{M[\sigma]}
+&amp;amp; = (\forall y. B[\frac{t}{x}])_{M[\sigma]} \\
+&amp;amp; = [(B[\frac{t}{x}])_{M[\sigma[y:=a]]} = \mathrm{T} &amp;amp; \text{ for all } a] \\
+&amp;amp; = [B_{M[\sigma[y:=a][x:=t_{M[\sigma[y:=a]]}]]} = \mathrm{T} &amp;amp; \text{ for all } a] \\
+&amp;amp; = [B_{M[\sigma[y:=a][x:=t_{M[\sigma]}]]} = \mathrm{T} &amp;amp; \text{ for all } a] \\
+&amp;amp; = [B_{M[\sigma[x:=t_{M[\sigma]}][y:=a]]} = \mathrm{T} &amp;amp; \text{ for all } a] \\
+&amp;amp; = [B_{M[\rho[y:=a]]} = \mathrm{T} &amp;amp; \text{ for all } a] \\
+&amp;amp; = (\forall y. B)_{M[\rho]}.
+\end{align}\]
+
+&lt;p&gt;$A = \forall y. B$, $\quad$ $y\not \equiv x$, $\quad$  $y\in FV(t)$ &lt;br /&gt;&lt;/p&gt;
+
+\[\begin{align}
+((\forall y. B)[\frac{t}{x}])_{M[\sigma]}
+&amp;amp; = (\forall z. B[\frac{z}{y}][\frac{t}{x}])_{M[\sigma]} \\
+&amp;amp; = [(B[\frac{z}{y}][\frac{t}{x}])_{M[\sigma[z:=a]]} = \mathrm{T} &amp;amp; \text{ for all } a] \\
+&amp;amp; = [(B[\frac{z}{y}])_{M[\sigma[z:=a][x:=t_{M[\sigma[z:=a]]}]]} = \mathrm{T} &amp;amp; \text{ for all } a] \\
+&amp;amp; = [(B[\frac{z}{y}])_{M[\sigma[z:=a][x:=t_{M[\sigma]}]]} = \mathrm{T} &amp;amp; \text{ for all } a] \\
+&amp;amp; = [(B[\frac{z}{y}])_{M[\sigma[x:=t_{M[\sigma]}][z:=a]]} = \mathrm{T} &amp;amp; \text{ for all } a] \\
+&amp;amp; = [(B[\frac{z}{y}])_{M[\rho[z:=a]]} = \mathrm{T} &amp;amp; \text{ for all } a] \\
+&amp;amp; = [B_{M[\rho[z:=a]][y:=z_{M[\sigma[z:=a]]}]} = \mathrm{T} &amp;amp; \text{ for all } a] \\
+&amp;amp; = [B_{M[\rho[z:=a][y:=a]]} = \mathrm{T} &amp;amp; \text{ for all } a] \\
+&amp;amp; = [B_{M[\rho[y:=a]]} = \mathrm{T} &amp;amp; \text{ for all } a] \\
+&amp;amp; = (\forall y. B)_{M[\rho]}.
+\end{align}\]
+
+&lt;p&gt;对最后一种情形的讨论解决了习题 24.&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;jump3.28&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;定理 3.28&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;设 $t \doteq s\in \varPsi$ 与 $s \doteq u\in \varPsi$ 成立. 由 3.25(1) &lt;br /&gt;&lt;/p&gt;
+
+\[\mathrm{Atom}(A) \text{ and } A\in \Psi\Rightarrow \lnot A\notin \Psi\]
+
+&lt;p&gt;知 $\lnot (t \doteq s) \notin \varPsi$, 进而由 3.25(3) &lt;br /&gt;&lt;/p&gt;
+
+\[A\rightarrow B\in \varPsi \Rightarrow \lnot A \in \varPsi \text{ or } B\in \varPsi\]
+
+&lt;p&gt;与 3.25(15) &lt;br /&gt;&lt;/p&gt;
+
+\[t \doteq s \rightarrow (s \doteq u \rightarrow t \doteq u) \in \varPsi\]
+
+&lt;p&gt;知 $(s\doteq u \rightarrow t\doteq u) \in \varPsi$. 类似可知 $t\doteq u\in \varPsi$, 即证明了传递性.&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;jump3.32&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;引理 3.32&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;1.$\quad$ $c_{M[\sigma]} = c_H = [c]$. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;2.$\quad$ $x_{M[\sigma]} = \sigma(x) = [x]$. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;3.$\quad$ $(f(t))_{M[\sigma]} = f_M (t _{ M[\sigma] }) = f_M([t]) = [f(t)]$. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;两个项相等, 从语义上说, 即它们能通过一系列公式联系起来, 得到语法上的相等. 因此考虑关于 $\doteq$ 的等价类.&lt;br /&gt;
+&lt;!--Hintikka 集只是对前述内容的一次简单的实例化. &quot;$\doteq$&quot; 表示项在语义上的相等关系. 因此, 在构造模型时, 应将等价类内的元素合并, 因此将 $[t]$ 作为 $t$ 的解释.--&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span id=&quot;jump3.33&quot;&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;引理 3.33&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;$A = p(t)$ &lt;br /&gt;&lt;/p&gt;
+
+\[\begin{align}
+A\in \varPsi &amp;amp; \Rightarrow p(t)\in \varPsi \Rightarrow p_H([t]) = \mathrm{T} \Rightarrow p_H(t_H[\sigma]) = \mathrm{T} \Rightarrow (p(t))_{H[\sigma]} = \mathrm{T},\\
+\lnot A\in \varPsi &amp;amp; \Rightarrow p(t)\notin \varPsi \Rightarrow p_H([t]) = \mathrm{F} \Rightarrow p_H(t_H[\sigma]) = \mathrm{F} \Rightarrow (p(t))_{H[\sigma]} = \mathrm{F}.
+\end{align}\]
+
+&lt;p&gt;$A = s \doteq t$ &lt;br /&gt;&lt;/p&gt;
+
+\[\begin{align}
+A\in \varPsi &amp;amp; \Rightarrow s\doteq t \in \varPsi \xrightarrow{3.29} [s] = [t] \Rightarrow s_{H[\sigma]} = t_{H[\sigma]} \Rightarrow (s\doteq t)_{H[\sigma]} = \mathrm{T},\\
+\lnot A \in \varPsi &amp;amp; \Rightarrow s\doteq t \notin \varPsi \Rightarrow [s] \ne [t] \Rightarrow s_{H[\sigma]} \ne t_{H[\sigma]} \Rightarrow (s\doteq t)_{H[\sigma]} = \mathrm{F}.
+\end{align}\]
+
+&lt;p&gt;$A = \lnot B$ &lt;br /&gt;&lt;/p&gt;
+
+\[\begin{align}
+A \in \varPsi &amp;amp; \Rightarrow \lnot B\in \varPsi \xrightarrow{\text{I.H.}} B_{H[\sigma]} = \mathrm{F} \Rightarrow A_{H[\sigma]} = \mathbf{B}_{\lnot}(B_{H[\sigma]}) = \mathrm{T},\\
+\lnot A \in \varPsi &amp;amp; \Rightarrow \lnot \lnot B\in \varPsi \xrightarrow{3.25(2)}B\in \varPsi \Rightarrow B_{H[\sigma]} = \mathrm{T} \Rightarrow A_{H[\sigma]} = \mathrm{F}.\\
+\end{align}\]
+
+&lt;p&gt;$A = B\lor C$ &lt;br /&gt;&lt;/p&gt;
+
+\[\begin{align}
+A \in \varPsi &amp;amp; \Rightarrow B\lor C\in \varPsi \\
+&amp;amp; \xrightarrow{3.25(7)} B\in \varPsi \text{ or } C \in \varPsi \\
+&amp;amp; \xrightarrow{\text{I.H.}} \mathbf{B}_{\lor}(B_{H[\sigma]}, C_{H[\sigma]}) = (B \lor C)_{H[\sigma]} = \mathrm{T}, \\
+\lnot A \in \varPsi &amp;amp; \Rightarrow \lnot(B\lor C)\in \varPsi \\
+&amp;amp; \xrightarrow{3.25(8)} \lnot B\in \varPsi \text{ and } \lnot C \in \varPsi \\
+&amp;amp; \Rightarrow \mathbf{B}_{\land}(\mathbf{B}_{\lnot}(B_{H[\sigma]}), \mathbf{B}_{\lnot}(C_{H[\sigma]})) = \mathrm{T} \\
+&amp;amp; \Rightarrow \mathbf{B}_{\lor}(B_{H[\sigma]}, C_{H[\sigma]}) = \mathrm{F} \\
+&amp;amp; \Rightarrow (B \lor C)_{H[\sigma]} = \mathrm{F}.
+\end{align}\]
+
+&lt;p&gt;$A = \forall x. B$&lt;/p&gt;
+
+\[\begin{align}
+A \in \varPsi &amp;amp; \Rightarrow \forall x. B \in \varPsi\\
+&amp;amp; \xrightarrow{3.25(11)} B[\frac{t}{x}] \in \varPsi &amp;amp; \text{for all } t \in T \\
+&amp;amp; \xrightarrow{\text{I.H.}} (B[\frac{t}{x}])_{H[\sigma]} = \mathrm{T} &amp;amp; \text{for all } t \in T \\
+&amp;amp; \xrightarrow{3.24} B_{H[\sigma[x:=t_{H[\sigma]}]]} = \mathrm{T} &amp;amp; \text{for all } t \in T \\
+&amp;amp; \Rightarrow B_{H[\sigma[x:=a]]} = \mathrm{T} &amp;amp; \text{for all } a \in H \\
+&amp;amp; \Rightarrow (\forall x. B)_{H[\sigma]} = A_{H[\sigma]} = \mathrm{T}, \\
+\lnot A \in \varPsi &amp;amp; \Rightarrow \lnot (\forall x. B) \in \varPsi\\
+&amp;amp; \xrightarrow{3.25(12)} \lnot B[\frac{t}{x}] \in \varPsi &amp;amp; \text{for some } t \in T \\
+&amp;amp; \xrightarrow{\text{I.H.}} (B[\frac{t}{x}])_{H[\sigma]} = \mathrm{F} &amp;amp; \text{for some } t \in T \\
+&amp;amp; \Rightarrow B_{H[\sigma[x:=t_{H[\sigma]}]]} = \mathrm{F} &amp;amp; \text{for some } t \in T \\
+&amp;amp; \Rightarrow B_{H[\sigma[x:=a]]} = \mathrm{F} &amp;amp; \text{for some } a \in H \\
+&amp;amp; \Rightarrow (\forall x. B)_{H[\sigma]} = A_{H[\sigma]} = \mathrm{F}.
+\end{align}\]
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;center&gt;&lt;h2 style=&quot;font-size : 40px&quot;&gt;$\S$ 4&lt;/h2&gt;&lt;/center&gt;
+
 </description>
         <pubDate>Wed, 24 Mar 2021 13:00:00 +0800</pubDate>
         <link>http://linrongen.github.io/mathematical%20logic/math/2021/03/24/Hintikka_Set.html</link>

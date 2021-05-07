@@ -36,7 +36,7 @@ a:hover { color: #03a4fb !important; text-decoration: none !important; border-bo
 
 .post-title-main { text-align: center; color: #abc0ca !important; }
 
-.post-content { font-size: 22px; text-align: justify; padding-bottom: 5em; }
+.post-content { font-family: "Helvetica" !important; font-size: 22px; text-align: justify; padding-bottom: 5em; }
 
 pre { background-color: black !important; border: none !important; border-radius: 0px !important; font-size: 20px !important; padding: 1.5em !important; color: white !important; }
 
