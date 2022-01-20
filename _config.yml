@@ -1,9 +1,10 @@
 ###########
 # site.title
 
-title: ET-Jekyll Theme
+title: Ronn's Blog
 description: A minimal Jekyll theme inspired by Tufte CSS
 url: "https://et-jekyll.netlify.app"
+tags: [ Test, Test1, Test2, Test3, Test4 ]
 host: 0.0.0.0
 
 
@@ -27,7 +28,7 @@ sass:
 
 baseurl: ""
 permalink: pretty
-timezone: America/New_York
+timezone: China/Shanghai
 future: false
 
 exclude:

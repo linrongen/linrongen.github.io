@@ -1,194 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ET-Jekyll Theme</title>
+    <title>Ronn's Blog</title>
     <description>A minimal Jekyll theme inspired by Tufte CSS</description>
     <link>http://0.0.0.0:4000</link>
     <atom:link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>ET-Jekyll theme</title>
-        <description>&lt;p&gt;ET-Jekyll theme is based off of &lt;a href=&quot;http://www.daveliepmann.com&quot;&gt;Dave Liepmann’s&lt;/a&gt; awesome &lt;a href=&quot;https://edwardtufte.github.io/tufte-css/&quot;&gt;Tufte CSS&lt;/a&gt; - which takes its style and inspiration from the wonderful book and handout designs of &lt;a href=&quot;https://www.edwardtufte.com/tufte/&quot;&gt;Edward Tufte&lt;/a&gt;.&lt;/p&gt;
+        <title>Hello World!</title>
+        <description>&lt;p&gt;Hello World!&lt;/p&gt;
 
-&lt;p&gt;The differences are subtle when comparing my variation to Tufte CSS, but these changes were made out of personal preference and are not in any way “better”. If you prefer the &lt;a href=&quot;https://edwardtufte.github.io/tufte-css/&quot;&gt;original CSS styling&lt;/a&gt; - please use it!&lt;/p&gt;
-
-&lt;h2 id=&quot;setup&quot;&gt;Setup&lt;/h2&gt;
-
-&lt;p&gt;To use ET-Jekyll, simply &lt;a href=&quot;https://github.com/bradleytaunt/ET-Jekyll&quot;&gt;download the files off Github&lt;/a&gt; and run the build as you would any other Jekyll site:&lt;/p&gt;
-
-&lt;pre class=&quot;code&quot;&gt;
-jekyll serve
-&lt;/pre&gt;
-
-&lt;p&gt;You’ll want to make edits to the &lt;code&gt;_config.yml&lt;/code&gt; and &lt;code&gt;Gemfile&lt;/code&gt; for core setting changes. For navigation, heading, footer or post layout changes - edit the corresponding HTML files in the includes folder.&lt;/p&gt;
-
-&lt;p&gt;That’s it for setup!&lt;/p&gt;
-
-&lt;h2 id=&quot;structure--elements&quot;&gt;Structure &amp;amp; Elements&lt;/h2&gt;
-
-&lt;p&gt;ET-Jekyll makes everything extremely easy for you to start writing content immediately. Simply write your posts in &lt;code&gt;markdown&lt;/code&gt; and the theme will handle the rest.&lt;/p&gt;
-
-&lt;p&gt;For best results, try following the writing design standards below:&lt;/p&gt;
-
-&lt;h3 id=&quot;headings&quot;&gt;Headings&lt;/h3&gt;
-
-&lt;p&gt;Blog post titles automatically use the &lt;code&gt;h1&lt;/code&gt; heading followed by a &lt;code&gt;subtitle&lt;/code&gt; classed paragraph tag for the date. Proceeding section headings use the &lt;code&gt;h2&lt;/code&gt; tag and lower level inner-headings use the &lt;code&gt;h3&lt;/code&gt; tag. As stated in the original Tufte CSS documentation:&lt;/p&gt;
-
-&lt;blockquote&gt;
-    &lt;p&gt;More specific headings are not supported&lt;/p&gt;
-    &lt;footer&gt;&lt;a href=&quot;https://edwardtufte.github.io/tufte-css/&quot;&gt;Tufte CSS - Sections &amp;amp; Headings&lt;/a&gt;&lt;/footer&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;span class=&quot;caps&quot;&gt;If the mood strikes&lt;/span&gt;, you can always use the &lt;code&gt;caps&lt;/code&gt; class to make the first set of words small-caps for new section headings. This should not be done in conjunction with the regular &lt;code&gt;h1&lt;/code&gt;, &lt;code&gt;h2&lt;/code&gt; heading structure. Stick to one or the other for reader consistency.&lt;/p&gt;
-
-&lt;h3 id=&quot;text--links&quot;&gt;Text &amp;amp; Links&lt;/h3&gt;
-
-&lt;p&gt;Write your content using regular &lt;code&gt;markdown&lt;/code&gt; structure for paragraphs, unordered / ordered lists, blockquotes, links, and code snippets. ET-Jekyll takes care of everything for you:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Unordered List&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;List item one&lt;/li&gt;
-  &lt;li&gt;List item two&lt;/li&gt;
-  &lt;li&gt;List item three&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Ordered List&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;List item one&lt;/li&gt;
-  &lt;li&gt;List item two&lt;/li&gt;
-  &lt;li&gt;List item three&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;Blockquotes&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-    The minimum we should hope for with any display technology is that it should do no harm.
-    &lt;footer&gt;&lt;a href=&quot;https://www.edwardtufte.com/tufte/&quot;&gt;Edward Tufte&lt;/a&gt;&lt;/footer&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-    The public is more familiar with bad design than good design. It is, in effect, conditioned to prefer bad design, because that is what it lives with. The new becomes threatening, the old reassuring.
-    &lt;footer&gt;&lt;a href=&quot;http://www.paul-rand.com&quot;&gt;Paul Rand&lt;/a&gt;&lt;/footer&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;Links&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Text links are set to the same color as the rest of the base content, as not to distract from the flow of reading. The &lt;code&gt;text-decoration&lt;/code&gt; is set to &lt;code&gt;underline&lt;/code&gt; which allows the interactive element to stand out without drawing the reader’s attention away from the content itself.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Code Snippets&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre class=&quot;code&quot;&gt;
-library(lattice)
-x &amp;lt;- mtcars$wt
-y &amp;lt;- mtcars$mpg
-xyplot(y ~ x, xlab=&quot;Car weight (lb/1000)&quot;, ylab=&quot;Miles per gallon of fuel&quot;,
-par.settings = list(axis.line = list(col=&quot;transparent&quot;)),
-panel = function(x, y,...) { 
-panel.xyplot(x, y, col=1, pch=16)
-panel.rug(x, y, col=1, x.units = rep(&quot;snpc&quot;, 2), y.units = rep(&quot;snpc&quot;, 2), ...)})
-&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Math Equations&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;ET-Jekyll uses MathJax for placing mathematical equations inline within your content.&lt;/p&gt;
-
-&lt;p&gt;When (a \ne 0), there are two solutions to (ax^2 + bx + c = 0) and they are&lt;/p&gt;
-
-\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
-
-&lt;p&gt;&lt;strong&gt;Tables&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p class=&quot;sans&quot;&gt;End of year device distribution by percentage&lt;/p&gt;
-&lt;figure&gt;
-&lt;table&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Devices&lt;/th&gt;
-            &lt;th&gt;2016&lt;/th&gt;
-            &lt;th&gt;2017&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Medium phones&lt;/th&gt;
-            &lt;td&gt;44&lt;/td&gt;
-            &lt;td&gt;55&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Phablets&lt;/th&gt;
-            &lt;td&gt;41&lt;/td&gt;
-            &lt;td&gt;55&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Full-size tablets&lt;/th&gt;
-            &lt;td&gt;8&lt;/td&gt;
-            &lt;td&gt;6&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Small tablets&lt;/th&gt;
-            &lt;td&gt;6&lt;/td&gt;
-            &lt;td&gt;4&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Small phones&lt;/th&gt;
-            &lt;td&gt;1&lt;/td&gt;
-            &lt;td&gt;0&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;span class=&quot;marginnote&quot;&gt;Source: &lt;a href=&quot;http://flurrymobile.tumblr.com/tagged/insights/&quot;&gt;Flurry Insights&lt;/a&gt;, 2016-2017. This is a sidenote. Feel free to add as much content as needed in these elements in order to better explain their attached figure item.&lt;/span&gt;
-&lt;/figure&gt;
-
-&lt;h3 id=&quot;sidenotes-footnotes-and-marginal-notes&quot;&gt;Sidenotes: Footnotes and Marginal Notes&lt;/h3&gt;
-
-&lt;p&gt;On larger viewports, sidenotes&lt;span class=&quot;sidenote-number&quot;&gt;&lt;/span&gt; and marginal notes are placed into the far right column so the reader avoids eye-jumping around the page to find the corresponding content. On small viewports these notes are placed under it’s parent content.
-&lt;span class=&quot;sidenote&quot;&gt;This is an short example of a generated sidenote.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Try resizing your viewport to see the design change in action.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Why no toggle?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The original Tufte CSS hides sidenote and marginal note content on smaller viewports until the user toggles them into view. Although this approach is pretty and keeps the overall design clean, it’s best not to sacrifice user accessibility over a slightly cleaner presentation.&lt;/p&gt;
-
-&lt;h3 id=&quot;figures&quot;&gt;Figures&lt;/h3&gt;
-
-&lt;p&gt;You’re welcome to simply use an &lt;code&gt;img&lt;/code&gt; element when pasting in static content to your articles, but a &lt;code&gt;figure&lt;/code&gt; element with included marginal notes is preferred.&lt;/p&gt;
-
-&lt;p&gt;Also remember to add the &lt;code&gt;loading=&quot;lazy&quot;&lt;/code&gt; attribute to all image elements to help improve initial loading performance.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img loading=&quot;lazy&quot; src=&quot;/images/flat-design-toggles_qfre51_c_scale,w_1400.jpg&quot; alt=&quot;Flat UI Toggles&quot; /&gt;
-    &lt;span class=&quot;marginnote&quot;&gt;User interface toggle comparison between flat and skeuomorphic design by &lt;a href=&quot;https://bradleytaunt.com&quot;&gt;Bradley Taunt&lt;/a&gt;.&lt;/span&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&quot;performance&quot;&gt;Performance&lt;/h2&gt;
-
-&lt;h3 id=&quot;using-font-display&quot;&gt;Using font-display&lt;/h3&gt;
-
-&lt;p&gt;&lt;strike&gt;ET-Jekyll theme uses &lt;a href=&quot;https://github.com/bramstein/fontfaceobserver&quot;&gt;Bram Stein’s FontFaceObserver script&lt;/a&gt; which adds a &lt;code&gt;fonts-loaded&lt;/code&gt; class to the document &lt;code&gt;html&lt;/code&gt; only once the custom typeface (&lt;i&gt;et-book&lt;/i&gt; in this instance) is loaded. Doing so prevents &lt;a href=&quot;https://css-tricks.com/fout-foit-foft/&quot;&gt;FOIT&lt;/a&gt; and ugly content pop-in on slower connections.&lt;/strike&gt;&lt;/p&gt;
-
-&lt;p&gt;ET-Jekyll now uses the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;font-display&lt;/code&gt; property to swap out the custom typeface. Less JS and simplicity is always a good thing.&lt;/p&gt;
-
-&lt;pre class=&quot;code&quot;&gt;
-// Keeping things simple
-font-display: swap;
-&lt;/pre&gt;
-
-&lt;h3 id=&quot;css-file&quot;&gt;CSS File&lt;/h3&gt;
-
-&lt;p&gt;All styling for this theme is loaded inside the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;style.css&lt;/code&gt; file (compressed by default). This ensures the main structure, layout and core elements of ET-Jekyll load instantly and avoid even further “pop-in”. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;et-book&lt;/code&gt; typeface is pulled in from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/fonts&lt;/code&gt; directory which helps cache and avoid FOUT.&lt;/p&gt;
-
-&lt;p&gt;Any design changes should be made to the &lt;code&gt;style.scss&lt;/code&gt; file inside the root directory.&lt;/p&gt;
-
-&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
-
-&lt;p&gt;This theme is an open source side project by &lt;a href=&quot;https://bradleytaunt.com&quot;&gt;Bradley Taunt&lt;/a&gt; - made with passion and care. Edit, improve, customize or butcher this theme as much as you’d like. If you spot an issue or find a better solution for any user pain-spots, please don’t hesitate to &lt;a href=&quot;https://github.com/bradleytaunt/ET-Jekyll/pulls&quot;&gt;open a PR with your changes&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Enjoy ET-Jekyll!&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&quot;lazy&quot; src=&quot;/images/Bella.jpg&quot; height=&quot;100&quot; /&gt;
+&lt;span class=&quot;marginnote&quot;&gt;&lt;a href=&quot;https://space.bilibili.com/672353429&quot;&gt;Bella&lt;/a&gt; is comming!.&lt;/span&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 14 Jan 2018 00:00:00 -0500</pubDate>
-        <link>http://0.0.0.0:4000//et-jekyll-theme/</link>
-        <guid isPermaLink="true">http://0.0.0.0:4000//et-jekyll-theme/</guid>
+        <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+        <link>http://0.0.0.0:4000//helloworld/</link>
+        <guid isPermaLink="true">http://0.0.0.0:4000//helloworld/</guid>
       </item>
     
   </channel>

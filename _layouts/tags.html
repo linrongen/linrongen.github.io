@@ -12,16 +12,14 @@ layout: compress
 
         {{ page.content }}
 
-        {% for post in site.posts %}
-            <article>
-                <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+        {% for tag in site.tags %}
+            <h2> {{ tag[0] }} </h2></br>
+            {% for post in tag[1] %}
+                <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
                 <span class="mini-note">
-                    {% for tag in post.tags %}
-                        {{ tag }}{% if forloop.last == false %}, {% else %}&nbsp&nbsp&nbsp{% endif %}
-                    {% endfor %}
                     {{ post.date | date: "%b %-d, %Y" }}
                 </span>
-            </article>
+            {% endfor %}
         {% endfor %}
 
     </main>
