@@ -34,3 +34,13 @@ future: false
 exclude:
 - README.md
 - LICENSE.md
+
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+
+exclude: [vendor]
+
+plugins:
+  - jekyll-image-size
+  - jekyll-seo-tag

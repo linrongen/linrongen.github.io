@@ -138,7 +138,11 @@ code {
 img {
     height: auto;
     margin-right: 4rem;
-    width: 100%;
+}
+
+img[src$="centerme"] {
+    display:block;
+    margin: 0 auto;
 }
 
 /**************************************
