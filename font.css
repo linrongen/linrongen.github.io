@@ -17,3 +17,43 @@
 	font-family: 'GeorgiaX';
 	src: url('fonts/GEORGIA.ttf');
 }
+
+@font-face {
+	font-family: 'cmunbtl';
+	src: url('fonts/cmunbtl.ttf');
+}
+
+@font-face {
+	font-family: 'cmunss';
+	src: url('fonts/cmunss.ttf');
+}
+
+@font-face {
+	font-family: 'cmunbmr';
+	src: url('fonts/cmunbmr.ttf');
+}
+
+@font-face {
+	font-family: 'cmuntt';
+	src: url('fonts/cmuntt.ttf');
+}
+
+@font-face {
+	font-family: 'cmuntb';
+	src: url('fonts/cmuntb.ttf');
+}
+
+@font-face {
+	font-family: 'cmunit';
+	src: url('fonts/cmunit.ttf');
+}
+
+@font-face {
+	font-family: 'dejavu';
+	src: url('fonts/dejavu-mono-latin-400-normal.ttf');
+}
+
+@font-face {
+	font-family: 'dejavu-it';
+	src: url('fonts/dejavu-mono-latin-400-italic.ttf');
+}
