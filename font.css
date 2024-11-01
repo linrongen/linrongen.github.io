@@ -12,3 +12,8 @@
 	font-family: 'LibertineRZI';
 	src: url('fonts/LinLibertine_RZI.otf');
 }
+
+@font-face {
+	font-family: 'GeorgiaX';
+	src: url('fonts/GEORGIA.ttf');
+}
